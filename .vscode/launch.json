@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MjApplication<mj>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.silva.mj.MjApplication",
+            "projectName": "mj",
+            "args": ""
+        }
+    ]
+}
