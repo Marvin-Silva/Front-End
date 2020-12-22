@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="evenement.css">
+    <link rel="stylesheet" href="film.css">
+    <!-- import vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Retourner à la page d'accueil -->
+    <div id="home"> <a href="index.html"><h3>Home</h1></a></div>
+
+    <h2>Votez dans votre film prefere</h2>
+            <!-- btn votation -->
+        <div class="container">
+            <button id="btn1"> 
+                <i>Votez</i>
+            </button>
+            <input type="number" value="0" id="inp1"><br>
+            
+                <button id="btn2"> 
+                    <i>Votez</i>
+                </button>
+                <input type="number" value="0" id="inp2"><br>
+               
+                    <button id="btn3"> 
+                        <i>Votez</i>
+                    </button>
+                    <input type="number" value="0" id="inp3"><br>
+                  
+                        <button id="btn4"> 
+                            <i>Votez</i>
+                        </button>
+                        <input type="number" value="0" id="inp4"><br>
+                        
+                            <button id="btn5"> 
+                                <i>Votez</i>
+                            </button>
+                            <input type="number" value="0" id="inp5">
+                    </div>
+
+    <div id="app">
+        <ul>
+             <!-- boucler dans la liste des FILMS et afficher le film -->
+         <li  v-for="contenu in ListeFilms"  value="film">
+             {{contenu.film}}-{{contenu.date}}
+        </li> 
+        </ul>
+        
+    </div>
+ </div> 
+
+
+<script>
+    // obtenir l'url lorsque le serveur est lancé
+ const apiURL = "http://localhost:8080/evenements";
+
+ new Vue({
+    //  lier l'identifiant app dans la div
+     el: '#app',
+    //  creer des objets et le renvoyer 
+     data(){
+         return {
+             ListeFilms:[],
+             film:false,
+         }
+     },
+    //  fetch de l'url localhost et reponse en json
+     created() {
+         fetch(apiURL)
+         .then(response =>{
+             return response.json();
+         })
+         .then(ListeFilms=> {
+             this.ListeFilms = ListeFilms;
+         })
+     }
+ });
+
+</script>
+<!-- faire appel au js -->
+<script type = "text/javascript" src="votebtn.js">
+</script> 
+</body>
+</html>

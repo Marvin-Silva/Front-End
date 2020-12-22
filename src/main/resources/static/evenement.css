@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #004058;
+  color: #DADBDD;
+  font-family: 'Roboto', sans-serif;
+
+}
+table{
+    border: 2px solid;
+    margin-left: 30%;
+}
+td{
+  padding-left: 50px;
+  padding-top: 10px;
+}
+.main{
+    border: 2px solid;
+}
+li{
+  cursor: pointer;
+}
+#btn{
+  height: 40px;
+  width: 40px;
+}
+.container{
+  display: inline;
+  float:right; 
+  padding: 8px;
+  height: 150px;
+  margin-right: 70%;
+}
+.container button{
+  padding: 5px;
+
+}
+#app {
+  width: 240px;
+
+}
+#app li{
+  padding: 5px;
+  margin-top: 5px;
+
+}

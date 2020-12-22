@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="evenement.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Retourner à la page d'accueil -->
+    <div id="home"> <a href="index.html"><h3>Home</h1></a></div>
+    <div class="main">
+
+        <!-- containeur d'un formulaire pour la création d'un évenement -->
+<div class="eve">
+    <form action="index.html" method="post" requered>
+        <div>
+            <h3>Ajouter un Événement</h3>
+            <label for="lieu">Lieu</label><br>
+            <select name="evenement" id="eve" v-for="voiture in ListeVehicule" @click ="AfficherVoiture(voiture)">{{voiture.film}}
+                <option value=""></option>
+                <option value="">Nantes</option>
+                <option value="">Rennes</option>
+                <option value="">Paris</option>
+                <option value="">Lyon</option>
+                <option value="">Angers</option>
+            </select>
+        </div>
+        <div>
+            <label for="films">films</label><br>
+            <select name="film" id="fm">
+                <option value="q"></option>
+                <option value="" >ACADEMY DINOSAUR</option>
+                <option value="" >ACE GOLDFINGER</option>
+                <option value="" >ADAPTATION HOLES</option>
+                <option value="" >AFFAIR PREJUDICE</option>
+                <option value="">AFRICAN EGG</option>
+            </select>
+        </div>
+        <div>
+        <label for="">date</label><br>                   
+         <input type="date" name="date" id="dt">
+
+            </select>
+        </div>
+        <input value="Valider" type="button">
+    </v-form>
+
+</div>
+</body>
+</html>

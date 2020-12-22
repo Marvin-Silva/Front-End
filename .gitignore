@@ -1,6 +1,5 @@
-*.html
-*.css
-*.js
+*.sql
+*.java
 :wq
 
 
